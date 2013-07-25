@@ -1,9 +1,11 @@
+#!/usr/bin/env python
+
 import random 
 import sys
 
 
-print "Welcome to the rock_paper_scissors game"
-print "I hope you enjoy, play you later!"
+print "======================Welcome to the rock_paper_scissors game================================="
+print "========================I hope you enjoy, play you later!====================================="
 
 print
 
@@ -21,7 +23,8 @@ weapon = ["r", "p", "s"]
 comp_weapon = random.choice(weapon)
 
 while loop_var == True:
-    print "Round " + str(round_num)
+    print "==============Round " + str(round_num) + "==============="
+    print 
     for match in range(0,3):
         choice = raw_input("pick rock(r), paper(p), or scissor(s): ")
         weapon = choice.lower()
@@ -61,7 +64,7 @@ while loop_var == True:
             print "it's a tie"
             tie_counter += 1
             player_pick_scissor += 1
-        comp_weapon = 's'
+        comp_weapon = random.choice(weapon)
             
             
     round_num += 1
@@ -74,9 +77,11 @@ while loop_var == True:
         comp_weapon = 'r'
     
     print "Results so far: "
+    print 
     print "you won: " + str(win_counter) + " times"
     print "you lost: " + str(loss_counter) + " times"
     print "you tied: " + str(tie_counter) + " times"
+    print
     quit_choice = raw_input("want to quit(q)? ")
     quit = quit_choice.lower()
     if quit == 'q' or quit == 'y' or quit == 'yes':
